@@ -17,6 +17,7 @@
 }
 @property(nonatomic, strong)UIView *topBarView;
 
+- (void)initTopBar;
 - (void)initTopBar:(NSString *)str;
 - (void)addBackButton;
 - (void)AddRightButton:(NSString *)str;

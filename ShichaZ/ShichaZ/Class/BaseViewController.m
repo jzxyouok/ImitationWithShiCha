@@ -35,6 +35,19 @@
 }
 
 //重写navigationBar
+- (void)initTopBar
+{
+    self.navigationController.navigationBarHidden=YES;
+    self.topBarView = [[UIView alloc] init ];
+    [self.view addSubview:self.topBarView];
+    [self.topBarView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(DEVICE_WIDTH, BAR_HEIGHT));
+        make.top.mas_equalTo(0);
+        make.left.mas_equalTo(0);
+    }];
+}
+
+//重写带字符串navigationBar
 - (void)initTopBar:(NSString *)str
 {
     self.navigationController.navigationBarHidden=YES;
