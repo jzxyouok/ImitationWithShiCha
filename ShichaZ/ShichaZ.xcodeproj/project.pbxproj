@@ -132,6 +132,9 @@
 				4BD092ED1CEF37370092B50F /* BaseViewController.m */,
 				4BD092EF1CEF37670092B50F /* CustomTabbarController.h */,
 				4BD092F01CEF37670092B50F /* CustomTabbarController.m */,
+				4BD092FE1CEF51B50092B50F /* 吃 */,
+				4BD092FF1CEF51B50092B50F /* 圈 */,
+				4BD093001CEF51B50092B50F /* 我 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -161,6 +164,27 @@
 				4BD092FC1CEF3D3B0092B50F /* NSString+PP.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		4BD092FE1CEF51B50092B50F /* 吃 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "吃";
+			sourceTree = "<group>";
+		};
+		4BD092FF1CEF51B50092B50F /* 圈 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "圈";
+			sourceTree = "<group>";
+		};
+		4BD093001CEF51B50092B50F /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "我";
 			sourceTree = "<group>";
 		};
 		8528DCC135AE3CE09C3685FB /* Frameworks */ = {
