@@ -27,6 +27,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - JSONModel (1.1.0)
   - Masonry (0.6.2)
   - MBProgressHUD (0.9.1)
   - MJRefresh (2.4.9)
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - FMDB
+  - JSONModel
   - Masonry
   - MBProgressHUD
   - MJRefresh
@@ -49,6 +51,7 @@ SPEC CHECKSUMS:
   AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  JSONModel: ec77e9865236a7a09d9cf7668df6b4b328d9ec1d
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   MJRefresh: be84acb912d0a66364f76a75426698a39528e2ed
