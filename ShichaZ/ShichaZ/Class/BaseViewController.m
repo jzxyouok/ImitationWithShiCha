@@ -8,11 +8,18 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
+@interface BaseViewController ()<UIGestureRecognizerDelegate>
 
 @end
 
 @implementation BaseViewController
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+//    iOS7右滑返回
+    self.navigationController.interactivePopGestureRecognizer.delegate = self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -144,6 +151,34 @@
 - (void)clickBackButton:(UIButton *)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+#pragma mark -
+#pragma mark --UIGestureRecognizerDelegate--
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer
+{
+    if ([self isRootViewController]) {
+        return NO;
+    } else {
+        return YES;
+    }
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldBeRequiredToFailByGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return [gestureRecognizer isKindOfClass:UIScreenEdgePanGestureRecognizer.class];
+}
+
+#pragma mark -
+#pragma mark --判断是不是根视图--
+- (BOOL)isRootViewController
+{
+    return (self == self.navigationController.viewControllers.firstObject);
 }
 
 - (void)didReceiveMemoryWarning {
