@@ -1,2 +1,3 @@
-# ImitationWithShiCha
-仿制品时差族
+### ImitationWithShiCha
+
+##### Imitation
