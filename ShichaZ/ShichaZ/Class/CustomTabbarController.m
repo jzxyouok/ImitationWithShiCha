@@ -17,6 +17,31 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UINavigationController *FoodNav = [[ UINavigationController alloc] initWithRootViewController:[[RestaurantGroupViewController alloc] init]];
+    [self setupChildController:FoodNav imageName:@"" selectedImage:@""];
+    
+    UINavigationController *GroupNav = [[UINavigationController alloc] initWithRootViewController:[[GroupViewController alloc] init]];
+    [self setupChildController:GroupNav imageName:@"" selectedImage:@""];
+
+    MySettingViewController *settingVC = [[MySettingViewController alloc] init];
+    UINavigationController *SettingNav = [[UINavigationController alloc] initWithRootViewController:settingVC];
+    [self setupChildController:SettingNav imageName:@"" selectedImage:@""];
+
+    
+    // 设置tabbar的背景图
+    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_bg"];
+    
+}
+
+- (void)setupChildController:(UIViewController *)vc imageName:(NSString *)imgName selectedImage:(NSString *)selectedImgName {
+    // 设置图片间距
+    vc.tabBarItem.imageInsets = UIEdgeInsetsMake(5, 0, -5, 0);
+    vc.tabBarItem.image = [UIImage imageNamed:imgName];
+    // 设置图片的不渲染
+    UIImage *image = [[UIImage imageNamed:selectedImgName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    vc.tabBarItem.selectedImage = image;
+    [self addChildViewController:vc];
 }
 
 - (void)didReceiveMemoryWarning {

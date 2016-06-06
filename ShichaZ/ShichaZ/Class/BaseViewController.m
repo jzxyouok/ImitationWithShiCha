@@ -25,7 +25,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = BACKGROUDCOLOR;
-    [self initTopBar:self.title];
+    
+//    self.navigationController.navigationBar.translucent = NO;
     
     if( (SYSTEMVERSION >= 7.0))
     {
@@ -46,6 +47,7 @@
 {
     self.navigationController.navigationBarHidden=YES;
     self.topBarView = [[UIView alloc] init ];
+    self.topBarView.backgroundColor = TOPBARCOLOR;
     [self.view addSubview:self.topBarView];
     [self.topBarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(DEVICE_WIDTH, BAR_HEIGHT));
@@ -59,6 +61,7 @@
 {
     self.navigationController.navigationBarHidden=YES;
     self.topBarView = [[UIView alloc] init ];
+    self.topBarView.backgroundColor = TOPBARCOLOR;
     [self.view addSubview:self.topBarView];
     [self.topBarView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.size.mas_equalTo(CGSizeMake(DEVICE_WIDTH, BAR_HEIGHT));
@@ -99,7 +102,7 @@
 {
     backBtn = [UIButton buttonWithType:UIButtonTypeCustom];  // 创建按钮
     [backBtn setFrame:CGRectMake(0, TopDistin(0), 50, 44)];   // 设置大小
-    [backBtn setImage:[UIImage imageNamed:@"btnback.png"] forState:UIControlStateNormal];
+    [backBtn setImage:[UIImage imageNamed:@"btnback"] forState:UIControlStateNormal];
     [backBtn addTarget:self action:@selector(clickBackButton:) forControlEvents:UIControlEventTouchDown];
     backBtn.tag=11880;
     [backBtn.titleLabel setFont:[UIFont systemFontOfSize:14]];

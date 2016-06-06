@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CustomTabbarController.h"
+//#import "MySettingViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -21,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+
     self.window.rootViewController = [[CustomTabbarController alloc] init];
     
     return YES;
