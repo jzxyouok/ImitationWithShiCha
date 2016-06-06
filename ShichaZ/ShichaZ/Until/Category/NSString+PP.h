@@ -12,6 +12,7 @@
 
 -(BOOL)isBlank;
 -(BOOL)isValid;
+
 - (NSString *)removeWhiteSpacesFromString;
 
 

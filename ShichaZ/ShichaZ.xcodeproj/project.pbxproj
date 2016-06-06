@@ -16,6 +16,15 @@
 		4BD092F11CEF37670092B50F /* CustomTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD092F01CEF37670092B50F /* CustomTabbarController.m */; };
 		4BD092FA1CEF3B680092B50F /* MBProgressHUD+PP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD092F91CEF3B680092B50F /* MBProgressHUD+PP.m */; };
 		4BD092FD1CEF3D3B0092B50F /* NSString+PP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD092FC1CEF3D3B0092B50F /* NSString+PP.m */; };
+		E589AE2C1CF45742007EF163 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE2B1CF45742007EF163 /* LoginViewController.m */; };
+		E589AE2F1CF45768007EF163 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE2E1CF45768007EF163 /* RegisterViewController.m */; };
+		E589AE321CF457A5007EF163 /* GroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE311CF457A5007EF163 /* GroupViewController.m */; };
+		E589AE351CF457F3007EF163 /* RestaurantGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE341CF457F3007EF163 /* RestaurantGroupViewController.m */; };
+		E589AE381CF45804007EF163 /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE371CF45804007EF163 /* RestaurantDetailViewController.m */; };
+		E589AE3B1CF45819007EF163 /* MySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE3A1CF45819007EF163 /* MySettingViewController.m */; };
+		E589EE071CF45C46002E626F /* IndentTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E589EE061CF45C46002E626F /* IndentTextField.m */; };
+		E589EE0A1CF46326002E626F /* PPUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = E589EE091CF46326002E626F /* PPUntils.m */; };
+		E5EB60951CFEAA6D0011E5F7 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EB60941CFEAA6D0011E5F7 /* SettingTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,24 @@
 		4BD092FC1CEF3D3B0092B50F /* NSString+PP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PP.m"; sourceTree = "<group>"; };
 		8636FBD7D04D29BAE715DB08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A80D266090026EA23CFC94A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		E589AE2A1CF45742007EF163 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		E589AE2B1CF45742007EF163 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		E589AE2D1CF45768007EF163 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		E589AE2E1CF45768007EF163 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		E589AE301CF457A5007EF163 /* GroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupViewController.h; sourceTree = "<group>"; };
+		E589AE311CF457A5007EF163 /* GroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupViewController.m; sourceTree = "<group>"; };
+		E589AE331CF457F3007EF163 /* RestaurantGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantGroupViewController.h; sourceTree = "<group>"; };
+		E589AE341CF457F3007EF163 /* RestaurantGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantGroupViewController.m; sourceTree = "<group>"; };
+		E589AE361CF45804007EF163 /* RestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailViewController.h; sourceTree = "<group>"; };
+		E589AE371CF45804007EF163 /* RestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailViewController.m; sourceTree = "<group>"; };
+		E589AE391CF45819007EF163 /* MySettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySettingViewController.h; sourceTree = "<group>"; };
+		E589AE3A1CF45819007EF163 /* MySettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySettingViewController.m; sourceTree = "<group>"; };
+		E589EE051CF45C46002E626F /* IndentTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndentTextField.h; sourceTree = "<group>"; };
+		E589EE061CF45C46002E626F /* IndentTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndentTextField.m; sourceTree = "<group>"; };
+		E589EE081CF46326002E626F /* PPUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUntils.h; sourceTree = "<group>"; };
+		E589EE091CF46326002E626F /* PPUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUntils.m; sourceTree = "<group>"; };
+		E5EB60931CFEAA6D0011E5F7 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		E5EB60941CFEAA6D0011E5F7 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,9 +159,10 @@
 				4BD092ED1CEF37370092B50F /* BaseViewController.m */,
 				4BD092EF1CEF37670092B50F /* CustomTabbarController.h */,
 				4BD092F01CEF37670092B50F /* CustomTabbarController.m */,
-				4BD092FE1CEF51B50092B50F /* 吃 */,
-				4BD092FF1CEF51B50092B50F /* 圈 */,
-				4BD093001CEF51B50092B50F /* 我 */,
+				E589AE261CF456DC007EF163 /* 登录:注册 */,
+				E589AE1A1CF456A7007EF163 /* 吃 */,
+				E589AE1E1CF456A7007EF163 /* 圈 */,
+				E589AE221CF456A7007EF163 /* 我 */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -162,29 +190,10 @@
 				4BD092F91CEF3B680092B50F /* MBProgressHUD+PP.m */,
 				4BD092FB1CEF3D3B0092B50F /* NSString+PP.h */,
 				4BD092FC1CEF3D3B0092B50F /* NSString+PP.m */,
+				E589EE081CF46326002E626F /* PPUntils.h */,
+				E589EE091CF46326002E626F /* PPUntils.m */,
 			);
 			path = Category;
-			sourceTree = "<group>";
-		};
-		4BD092FE1CEF51B50092B50F /* 吃 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "吃";
-			sourceTree = "<group>";
-		};
-		4BD092FF1CEF51B50092B50F /* 圈 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "圈";
-			sourceTree = "<group>";
-		};
-		4BD093001CEF51B50092B50F /* 我 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "我";
 			sourceTree = "<group>";
 		};
 		8528DCC135AE3CE09C3685FB /* Frameworks */ = {
@@ -202,6 +211,146 @@
 				8A80D266090026EA23CFC94A /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E589AE1A1CF456A7007EF163 /* 吃 */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE1B1CF456A7007EF163 /* Model */,
+				E589AE1C1CF456A7007EF163 /* View */,
+				E589AE1D1CF456A7007EF163 /* ViewController */,
+			);
+			path = "吃";
+			sourceTree = "<group>";
+		};
+		E589AE1B1CF456A7007EF163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E589AE1C1CF456A7007EF163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E589AE1D1CF456A7007EF163 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE331CF457F3007EF163 /* RestaurantGroupViewController.h */,
+				E589AE341CF457F3007EF163 /* RestaurantGroupViewController.m */,
+				E589AE361CF45804007EF163 /* RestaurantDetailViewController.h */,
+				E589AE371CF45804007EF163 /* RestaurantDetailViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E589AE1E1CF456A7007EF163 /* 圈 */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE1F1CF456A7007EF163 /* Model */,
+				E589AE201CF456A7007EF163 /* View */,
+				E589AE211CF456A7007EF163 /* ViewController */,
+			);
+			path = "圈";
+			sourceTree = "<group>";
+		};
+		E589AE1F1CF456A7007EF163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E589AE201CF456A7007EF163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E589AE211CF456A7007EF163 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE301CF457A5007EF163 /* GroupViewController.h */,
+				E589AE311CF457A5007EF163 /* GroupViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E589AE221CF456A7007EF163 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE231CF456A7007EF163 /* Model */,
+				E589AE241CF456A7007EF163 /* View */,
+				E589AE251CF456A7007EF163 /* ViewController */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		E589AE231CF456A7007EF163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E589AE241CF456A7007EF163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5EB60931CFEAA6D0011E5F7 /* SettingTableViewCell.h */,
+				E5EB60941CFEAA6D0011E5F7 /* SettingTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E589AE251CF456A7007EF163 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE391CF45819007EF163 /* MySettingViewController.h */,
+				E589AE3A1CF45819007EF163 /* MySettingViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E589AE261CF456DC007EF163 /* 登录:注册 */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE271CF456DC007EF163 /* Model */,
+				E589AE281CF456DC007EF163 /* View */,
+				E589AE291CF456DC007EF163 /* ViewController */,
+			);
+			path = "登录:注册";
+			sourceTree = "<group>";
+		};
+		E589AE271CF456DC007EF163 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E589AE281CF456DC007EF163 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E589EE051CF45C46002E626F /* IndentTextField.h */,
+				E589EE061CF45C46002E626F /* IndentTextField.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E589AE291CF456DC007EF163 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E589AE2A1CF45742007EF163 /* LoginViewController.h */,
+				E589AE2B1CF45742007EF163 /* LoginViewController.m */,
+				E589AE2D1CF45768007EF163 /* RegisterViewController.h */,
+				E589AE2E1CF45768007EF163 /* RegisterViewController.m */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,9 +505,18 @@
 				4B777A261CEDAFCD00BF92C1 /* AppDelegate.m in Sources */,
 				4BD092FD1CEF3D3B0092B50F /* NSString+PP.m in Sources */,
 				4BD092FA1CEF3B680092B50F /* MBProgressHUD+PP.m in Sources */,
+				E589AE321CF457A5007EF163 /* GroupViewController.m in Sources */,
 				4BD092EE1CEF37370092B50F /* BaseViewController.m in Sources */,
+				E5EB60951CFEAA6D0011E5F7 /* SettingTableViewCell.m in Sources */,
+				E589EE071CF45C46002E626F /* IndentTextField.m in Sources */,
+				E589AE351CF457F3007EF163 /* RestaurantGroupViewController.m in Sources */,
+				E589AE2C1CF45742007EF163 /* LoginViewController.m in Sources */,
+				E589AE3B1CF45819007EF163 /* MySettingViewController.m in Sources */,
+				E589AE381CF45804007EF163 /* RestaurantDetailViewController.m in Sources */,
+				E589EE0A1CF46326002E626F /* PPUntils.m in Sources */,
 				4BD092F11CEF37670092B50F /* CustomTabbarController.m in Sources */,
 				4B777A231CEDAFCD00BF92C1 /* main.m in Sources */,
+				E589AE2F1CF45768007EF163 /* RegisterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

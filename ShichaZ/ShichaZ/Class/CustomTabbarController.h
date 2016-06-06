@@ -7,6 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RestaurantGroupViewController.h"
+#import "GroupViewController.h"
+#import "MySettingViewController.h"
+
 
 @interface CustomTabbarController : UITabBarController
 

@@ -16,7 +16,7 @@
     return ([[self removeWhiteSpacesFromString] isEqualToString:@""]) ? YES : NO;
 }
 
-//判断字符串为空或者nil
+//判断字符串为空或者nil 
 -(BOOL)isValid
 {
     return ([[self removeWhiteSpacesFromString] isEqualToString:@""] || self == nil || [self isEqualToString:@"(null)"]) ? NO :YES;
