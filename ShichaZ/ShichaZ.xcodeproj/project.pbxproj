@@ -24,6 +24,7 @@
 		E589AE3B1CF45819007EF163 /* MySettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E589AE3A1CF45819007EF163 /* MySettingViewController.m */; };
 		E589EE071CF45C46002E626F /* IndentTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E589EE061CF45C46002E626F /* IndentTextField.m */; };
 		E589EE0A1CF46326002E626F /* PPUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = E589EE091CF46326002E626F /* PPUntils.m */; };
+		E5A8826F1D112D4700AE2A2E /* GroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A8826E1D112D4700AE2A2E /* GroupTableViewCell.m */; };
 		E5EB60951CFEAA6D0011E5F7 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5EB60941CFEAA6D0011E5F7 /* SettingTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		E589EE061CF45C46002E626F /* IndentTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndentTextField.m; sourceTree = "<group>"; };
 		E589EE081CF46326002E626F /* PPUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUntils.h; sourceTree = "<group>"; };
 		E589EE091CF46326002E626F /* PPUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUntils.m; sourceTree = "<group>"; };
+		E5A8826D1D112D4700AE2A2E /* GroupTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableViewCell.h; sourceTree = "<group>"; };
+		E5A8826E1D112D4700AE2A2E /* GroupTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableViewCell.m; sourceTree = "<group>"; };
 		E5EB60931CFEAA6D0011E5F7 /* SettingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		E5EB60941CFEAA6D0011E5F7 /* SettingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -251,25 +254,10 @@
 		E589AE1E1CF456A7007EF163 /* 圈 */ = {
 			isa = PBXGroup;
 			children = (
-				E589AE1F1CF456A7007EF163 /* Model */,
-				E589AE201CF456A7007EF163 /* View */,
+				E5A8826C1D112D2200AE2A2E /* View */,
 				E589AE211CF456A7007EF163 /* ViewController */,
 			);
 			path = "圈";
-			sourceTree = "<group>";
-		};
-		E589AE1F1CF456A7007EF163 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		E589AE201CF456A7007EF163 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		E589AE211CF456A7007EF163 /* ViewController */ = {
@@ -284,18 +272,10 @@
 		E589AE221CF456A7007EF163 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
-				E589AE231CF456A7007EF163 /* Model */,
 				E589AE241CF456A7007EF163 /* View */,
 				E589AE251CF456A7007EF163 /* ViewController */,
 			);
 			path = "我";
-			sourceTree = "<group>";
-		};
-		E589AE231CF456A7007EF163 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E589AE241CF456A7007EF163 /* View */ = {
@@ -319,18 +299,12 @@
 		E589AE261CF456DC007EF163 /* 登录:注册 */ = {
 			isa = PBXGroup;
 			children = (
-				E589AE271CF456DC007EF163 /* Model */,
+				E5A8826A1D1126BE00AE2A2E /* Model */,
+				E5A8826B1D1126BE00AE2A2E /* ViewModel */,
 				E589AE281CF456DC007EF163 /* View */,
 				E589AE291CF456DC007EF163 /* ViewController */,
 			);
 			path = "登录:注册";
-			sourceTree = "<group>";
-		};
-		E589AE271CF456DC007EF163 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E589AE281CF456DC007EF163 /* View */ = {
@@ -351,6 +325,29 @@
 				E589AE2E1CF45768007EF163 /* RegisterViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		E5A8826A1D1126BE00AE2A2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E5A8826B1D1126BE00AE2A2E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E5A8826C1D112D2200AE2A2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E5A8826D1D112D4700AE2A2E /* GroupTableViewCell.h */,
+				E5A8826E1D112D4700AE2A2E /* GroupTableViewCell.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -517,6 +514,7 @@
 				4BD092F11CEF37670092B50F /* CustomTabbarController.m in Sources */,
 				4B777A231CEDAFCD00BF92C1 /* main.m in Sources */,
 				E589AE2F1CF45768007EF163 /* RegisterViewController.m in Sources */,
+				E5A8826F1D112D4700AE2A2E /* GroupTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

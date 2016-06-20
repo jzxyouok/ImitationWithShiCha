@@ -15,6 +15,8 @@
 #define SYSTEMVERSION [[[UIDevice currentDevice] systemVersion] doubleValue]
 #define BAR_HEIGHT ((SYSTEMVERSION>=7.0) ? 64.0 : 44.0)
 #define TopDistin(r) ((SYSTEMVERSION>=7.0) ?(20+(r)) : (r))
+#define VIEW_HEIGHT ((SYSTEMVERSION>=7.0) ? DEVICE_HEIGHT-BAR_HEIGHT : DEVICE_HEIGHT-BAR_HEIGHT-20) //view高度
+#define TABBAR_HEIGHT 49.0
 
 #pragma mark -
 #pragma mark --颜色相关--
