@@ -8,9 +8,12 @@
 
 #import "GroupViewController.h"
 #import "MJRefreshComponent.h"
+#import "GroupTableViewCell.h"
 static NSString* const cellIdentifier = @"cell";
+static float const HEADER_HEIGHT = 250;
+static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-1438-4270-9560-b95b76da25fd/original";
 
-@interface GroupViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface GroupViewController ()<UITableViewDelegate,UITableViewDataSource,GroupTableViewCellDelegate>
 
 @property (nonatomic,strong)UITableView *groupTable;
 
@@ -25,14 +28,15 @@ static NSString* const cellIdentifier = @"cell";
     
     self.view.backgroundColor = [UIColor yellowColor];
     
-//    self.groupTable//加到ViewDidLoad
-if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
+    if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
         [self.groupTable setSeparatorInset:UIEdgeInsetsZero];
     }
     if ([self.groupTable respondsToSelector:@selector(setLayoutMargins:)])
     {
         [self.groupTable setLayoutMargins:UIEdgeInsetsZero];
     }
+    
+    [self.groupTable.header beginRefreshing];
 }
 
 - (UITableView *)groupTable
@@ -41,13 +45,14 @@ if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
         _groupTable = [[UITableView alloc] init];
         [self.view addSubview:_groupTable];
         UIImageView *imageView = [[UIImageView alloc] init];
-        imageView.frame = CGRectMake(0, BAR_HEIGHT, DEVICE_WIDTH, 100);
+        [imageView sd_setImageWithURL:[NSURL URLWithString:imageURL]];
+        imageView.frame = CGRectMake(0, BAR_HEIGHT, DEVICE_WIDTH, HEADER_HEIGHT);
         imageView.backgroundColor = [UIColor blueColor];
         _groupTable.tableHeaderView = imageView;
         _groupTable.tableFooterView = [UIView new];
         _groupTable.delegate = self;
         _groupTable.dataSource = self;
-        _groupTable.header = [MJRefreshStateHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
+        _groupTable.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(headerRefresh)];
         [_groupTable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(BAR_HEIGHT);
             make.size.mas_equalTo(CGSizeMake(DEVICE_WIDTH, VIEW_HEIGHT-TABBAR_HEIGHT));
@@ -58,12 +63,13 @@ if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
 
 - (void)headerRefresh
 {
-//    [_groupTable.header beginRefreshing];
-    NSLog(@"1231");
-    
+    //加载网络数据
     [_groupTable.header endRefreshing];
 }
 
+
+#pragma mark -
+#pragma mark --uitableviewdelegate--
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return 10;
@@ -76,16 +82,18 @@ if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60.0f;
+    return 140.0f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    GroupTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[GroupTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld",indexPath.row];
+    cell.tag = indexPath.row+1000;
+    cell.delegate = self;
+    [cell bingDataFrom];
     return cell;
 }
 
@@ -98,6 +106,16 @@ if ([self.groupTable respondsToSelector:@selector(setSeparatorInset:)]) {
     if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
         [cell setLayoutMargins:UIEdgeInsetsZero];
     }
+}
+
+- (void)clickedHeadImageBy:(NSInteger)index
+{
+    NSLog(@"点了%ld的头像",(long)index);
+}
+
+- (void)clickedUserNameBy:(NSInteger)index
+{
+    NSLog(@"点了%ld的名字",(long)index);
 }
 
 - (void)didReceiveMemoryWarning {

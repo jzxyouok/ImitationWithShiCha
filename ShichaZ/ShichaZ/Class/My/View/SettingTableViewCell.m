@@ -6,6 +6,8 @@
 //  Copyright © 2016年 Kity_Pei. All rights reserved.
 //
 
+static float const IMAGE_WIDTH = 30;
+
 #import "SettingTableViewCell.h"
 
 @implementation SettingTableViewCell
@@ -39,7 +41,7 @@
         [self.contentView addSubview:_ppImageView];
         
         [_ppImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(30, 30));
+            make.size.mas_equalTo(CGSizeMake(IMAGE_WIDTH, IMAGE_WIDTH));
             make.left.mas_equalTo(10);
             make.top.mas_equalTo(7);
         }];
@@ -53,9 +55,10 @@
     if (!_titleLabel) {
         _titleLabel = [[UILabel alloc] init];
         [self.contentView addSubview:_titleLabel];
+        __typeof(self) __weak weakSelf = self;
         [_titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(DEVICE_WIDTH-200, 44));
-            make.left.equalTo(self.ppImageView.mas_right).offset(10);
+            make.left.equalTo(weakSelf.ppImageView.mas_right).offset(10);
             make.top.mas_equalTo(0);
         }];
     }
