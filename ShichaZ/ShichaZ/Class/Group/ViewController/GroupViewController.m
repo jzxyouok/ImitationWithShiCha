@@ -90,11 +90,12 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 //    return 140.0f;
-    GroupTableViewCell *cell = (GroupTableViewCell *)[self tableView:self.groupTable cellForRowAtIndexPath:indexPath];
-//    return [cell heightOfRow];
-    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(CGRectGetMaxY(cell.timeLabel.frame)+10);
-    }];
+//    GroupTableViewCell *cell = (GroupTableViewCell *)[self tableView:self.groupTable cellForRowAtIndexPath:indexPath];
+////    return [cell heightOfRow];
+//    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.height.mas_equalTo(CGRectGetMaxY(cell.timeLabel.frame)+10);
+//    }];
+    return 140.0f;
     
 }
 
