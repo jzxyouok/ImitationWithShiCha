@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CustomTabbarController.h"
-//#import "MySettingViewController.h"
+//#import "YTKNetworkConfig.h"
 @interface AppDelegate ()
 
 @end
@@ -24,6 +24,9 @@
     [self.window makeKeyAndVisible];
 
     self.window.rootViewController = [[CustomTabbarController alloc] init];
+    
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedInstance];
+    config.baseUrl = @"http://api.shichazu.com/";
     
     return YES;
 }

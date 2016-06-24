@@ -12,7 +12,7 @@
     UILabel *lblTitle;
     UIView *viewState;
     UIButton *saveBtn;
-    UIButton * backBtn;
+    UIButton *backBtn;
 }
 @property(nonatomic, strong)UIView *topBarView;
 

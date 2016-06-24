@@ -17,6 +17,8 @@
 		4BD092FA1CEF3B680092B50F /* MBProgressHUD+PP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD092F91CEF3B680092B50F /* MBProgressHUD+PP.m */; };
 		4BD092FD1CEF3D3B0092B50F /* NSString+PP.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BD092FC1CEF3D3B0092B50F /* NSString+PP.m */; };
 		E589EE0A1CF46326002E626F /* PPUntils.m in Sources */ = {isa = PBXBuildFile; fileRef = E589EE091CF46326002E626F /* PPUntils.m */; };
+		E5E2BF471D1BD86F00888D44 /* DiscussModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2BF461D1BD86F00888D44 /* DiscussModel.m */; };
+		E5E2BF4A1D1BDB5300888D44 /* DiscussRequestApi.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E2BF491D1BDB5300888D44 /* DiscussRequestApi.m */; };
 		E5E3E39D1D184BD200C4A640 /* RestaurantDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E3E3801D184BD200C4A640 /* RestaurantDetailViewController.m */; };
 		E5E3E39E1D184BD200C4A640 /* RestaurantGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E3E3821D184BD200C4A640 /* RestaurantGroupViewController.m */; };
 		E5E3E39F1D184BD200C4A640 /* GroupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E3E3861D184BD200C4A640 /* GroupTableViewCell.m */; };
@@ -63,6 +65,10 @@
 		8A80D266090026EA23CFC94A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		E589EE081CF46326002E626F /* PPUntils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPUntils.h; sourceTree = "<group>"; };
 		E589EE091CF46326002E626F /* PPUntils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPUntils.m; sourceTree = "<group>"; };
+		E5E2BF451D1BD86F00888D44 /* DiscussModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussModel.h; sourceTree = "<group>"; };
+		E5E2BF461D1BD86F00888D44 /* DiscussModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussModel.m; sourceTree = "<group>"; };
+		E5E2BF481D1BDB5300888D44 /* DiscussRequestApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscussRequestApi.h; sourceTree = "<group>"; };
+		E5E2BF491D1BDB5300888D44 /* DiscussRequestApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscussRequestApi.m; sourceTree = "<group>"; };
 		E5E3E37F1D184BD200C4A640 /* RestaurantDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantDetailViewController.h; sourceTree = "<group>"; };
 		E5E3E3801D184BD200C4A640 /* RestaurantDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantDetailViewController.m; sourceTree = "<group>"; };
 		E5E3E3811D184BD200C4A640 /* RestaurantGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantGroupViewController.h; sourceTree = "<group>"; };
@@ -216,6 +222,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E5E2BF441D1BD86100888D44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E5E2BF451D1BD86F00888D44 /* DiscussModel.h */,
+				E5E2BF461D1BD86F00888D44 /* DiscussModel.m */,
+				E5E2BF481D1BDB5300888D44 /* DiscussRequestApi.h */,
+				E5E2BF491D1BDB5300888D44 /* DiscussRequestApi.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		E5E3E37D1D184BD200C4A640 /* Eating */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +255,7 @@
 		E5E3E3831D184BD200C4A640 /* Group */ = {
 			isa = PBXGroup;
 			children = (
+				E5E2BF441D1BD86100888D44 /* Model */,
 				E5E3E3841D184BD200C4A640 /* View */,
 				E5E3E3871D184BD200C4A640 /* ViewController */,
 			);
@@ -258,16 +276,8 @@
 			children = (
 				E5E3E3881D184BD200C4A640 /* GroupViewController.h */,
 				E5E3E3891D184BD200C4A640 /* GroupViewController.m */,
-				E5E3E38A1D184BD200C4A640 /* 未命名文件夹 */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		E5E3E38A1D184BD200C4A640 /* 未命名文件夹 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "未命名文件夹";
 			sourceTree = "<group>";
 		};
 		E5E3E38B1D184BD200C4A640 /* Login:Res */ = {
@@ -492,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B777A261CEDAFCD00BF92C1 /* AppDelegate.m in Sources */,
+				E5E2BF4A1D1BDB5300888D44 /* DiscussRequestApi.m in Sources */,
 				4BD092FD1CEF3D3B0092B50F /* NSString+PP.m in Sources */,
 				E5E3E3A41D184BD200C4A640 /* SettingTableViewCell.m in Sources */,
 				4BD092FA1CEF3B680092B50F /* MBProgressHUD+PP.m in Sources */,
@@ -507,6 +518,7 @@
 				E5E3E39E1D184BD200C4A640 /* RestaurantGroupViewController.m in Sources */,
 				E5E3E3A21D184BD200C4A640 /* LoginViewController.m in Sources */,
 				E5E3E3A11D184BD200C4A640 /* IndentTextField.m in Sources */,
+				E5E2BF471D1BD86F00888D44 /* DiscussModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

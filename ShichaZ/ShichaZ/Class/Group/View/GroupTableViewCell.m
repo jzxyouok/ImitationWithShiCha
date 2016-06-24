@@ -20,7 +20,7 @@ static float const LABLE_HEIGHT = 20;
 @property (nonatomic,strong)UILabel *couptonLabel;//就餐时间
 @property (nonatomic,strong)UILabel *distanceLabel;//距离
 @property (nonatomic,strong)UILabel *contentLabel;//评价
-@property (nonatomic,strong)UILabel *timeLabel;//评价时间
+
 @property (nonatomic,strong)NSArray *imageArray;//图片数组
 
 
@@ -81,6 +81,7 @@ static float const LABLE_HEIGHT = 20;
 {
     if (!_userNameLabel) {
         _userNameLabel = [[UILabel alloc] init];
+        _userNameLabel.backgroundColor = [UIColor redColor];
         _userNameLabel.userInteractionEnabled = YES;
         _userNameLabel.font = [UIFont systemFontOfSize:12.0f];
         [self.contentView addSubview:_userNameLabel];
@@ -188,16 +189,43 @@ static float const LABLE_HEIGHT = 20;
 }
 
 
-- (void)bingDataFrom
+- (void)bingDataFrom:(DiscussModel *)model
 {
-    self.contentLabel.text = @"三大大大大大大大时达到萨达达大厦大厦大厦大厦大厦大大实打实大大三大大撒大大的撒撒打算打算打算打算的萨达";
-    self.timeLabel.text = @"2016-06-20 15:31:20";
+    self.contentLabel.text = model.content;
+    self.timeLabel.text = model.time;
     self.distanceLabel.text = @"<100m";
-    self.couptonLabel.text = @"10:00-22:00";
-    self.rebateLabel.text = @"9.5折";
-    self.userNameLabel.text = @"小光头-大胖子大胖子";
+    self.couptonLabel.text = model.couponTime;
+    float discount = [model.discount floatValue];
+    
+    self.rebateLabel.text = [NSString stringWithFormat:@"%.1f折",discount];
+    NSString *userName = [NSString stringWithFormat:@"%@-%@",model.nickname,model.businessName];;
+    self.userNameLabel.text = userName;
+    
+    CGSize size = [PPUntils getSizeByString:userName AndFontSize:12.0f WithBoundSize:CGSizeMake(MAXFLOAT, LABLE_HEIGHT)];
+    
+    [_userNameLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(size.width+1, LABLE_HEIGHT));
+    }];
+    
+    NSLog(@"%f",self.timeLabel.frame.origin.y);
+    
+//    if (model.images.count > 0) {
+//        self.imageArray = model.images;
+//        [self setDiscussImage:self.imageArray];
+//    }
+    bottomHeight = CGRectGetMaxY(self.timeLabel.frame)+10;
+//    
 }
 
+- (CGFloat)heightOfRow
+{
+    return bottomHeight;
+}
+
+- (void)setDiscussImage:(NSArray *)array
+{
+    
+}
 
 - (void)clickUserName
 {

@@ -9,12 +9,17 @@
 #import "GroupViewController.h"
 #import "MJRefreshComponent.h"
 #import "GroupTableViewCell.h"
+#import "DiscussModel.h"
+#import "DiscussRequestApi.h"
 static NSString* const cellIdentifier = @"cell";
 static float const HEADER_HEIGHT = 250;
 static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-1438-4270-9560-b95b76da25fd/original";
 
-@interface GroupViewController ()<UITableViewDelegate,UITableViewDataSource,GroupTableViewCellDelegate>
-
+@interface GroupViewController ()<UITableViewDelegate,UITableViewDataSource,GroupTableViewCellDelegate,YTKRequestDelegate>
+//{
+//    DiscussRequestApi *api;
+//}
+@property (nonatomic,strong)DiscussResponseStatusModel *model;
 @property (nonatomic,strong)UITableView *groupTable;
 
 @end
@@ -64,7 +69,9 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
 - (void)headerRefresh
 {
     //加载网络数据
-    [_groupTable.header endRefreshing];
+    
+    [self loadData];
+//    [_groupTable.header endRefreshing];
 }
 
 
@@ -72,7 +79,7 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
 #pragma mark --uitableviewdelegate--
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.model.result.results.count;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -82,7 +89,13 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 140.0f;
+//    return 140.0f;
+    GroupTableViewCell *cell = (GroupTableViewCell *)[self tableView:self.groupTable cellForRowAtIndexPath:indexPath];
+//    return [cell heightOfRow];
+    [cell mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.height.mas_equalTo(CGRectGetMaxY(cell.timeLabel.frame)+10);
+    }];
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,7 +106,9 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
     }
     cell.tag = indexPath.row+1000;
     cell.delegate = self;
-    [cell bingDataFrom];
+    
+    DiscussModel *disCuss = self.model.result.results[indexPath.row];
+    [cell bingDataFrom:disCuss];
     return cell;
 }
 
@@ -116,6 +131,40 @@ static NSString* const imageURL = @"http://img.shichazu.com/201419/0/db15cdc6-14
 - (void)clickedUserNameBy:(NSInteger)index
 {
     NSLog(@"点了%ld的名字",(long)index);
+}
+
+- (void)loadData
+{
+    NSString *city = @"100";
+    NSString *pageNo = @"2";
+    NSString *sign = @"044af4e7e49579b6fa8ad261d8033a15";
+    DiscussRequestApi *api = [[DiscussRequestApi alloc] initWithCity:city pageNo:pageNo sign:sign];
+    api.delegate = self;
+    [api start];
+    
+}
+- (void)requestFinished:(YTKBaseRequest *)request
+{
+    NSLog(@"%@",request.responseString);
+    [_groupTable.header endRefreshing];
+    
+    self.model = [[DiscussResponseStatusModel alloc] initWithString:request.responseString error:nil];
+    
+    [self performSelectorOnMainThread:@selector(refresh) withObject:nil waitUntilDone:YES];
+    
+    
+}
+
+- (void)refresh
+{
+    [_groupTable reloadData];
+}
+
+- (void)requestFailed:(YTKBaseRequest *)request
+{
+    NSLog(@"%@",request.responseString);
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "DiscussModel.h"
 @protocol GroupTableViewCellDelegate <NSObject>
 
 - (void)clickedHeadImageBy:(NSInteger)index;
@@ -19,9 +19,15 @@
 
 
 @interface GroupTableViewCell : UITableViewCell
-
+{
+    float bottomHeight;
+}
 @property (nonatomic,weak)id<GroupTableViewCellDelegate> delegate;
+@property (nonatomic,strong)UILabel *timeLabel;//评价时间
 
-- (void)bingDataFrom;
+- (void)bingDataFrom:(DiscussModel *)model;
+
+
+- (CGFloat)heightOfRow;
 
 @end
